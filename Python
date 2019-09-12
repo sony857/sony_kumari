@@ -1,0 +1,302 @@
+<------------21 Math and Random Modules---------------->
+
+import random
+import math
+a=0.543
+print(round(a))
+b=9
+print(math.sqrt(b))
+print(random.randint(0,1))
+print(random.uniform(10,500))
+print(math.ceil(a))
+print(math.factorial(b))
+print(math.floor(b))
+print(math.exp(b))
+print(math.fabs(b))
+print(random.randrange(1,10,2))
+print(random.choice([12,23,45,67,65,43]))
+
+
+
+<----------------22 Math- Trigonometric functions----------->
+
+
+import math
+num1 = input('enter first number: ')
+x=float(num1)
+num2= input('Enter second number: ')
+y=float(num2)
+print(math.cos(x))
+print(math.sin(x))
+print(math.tan(x))
+print(math.acos(x))
+print(math.asin(x))
+print(math.atan(x))
+print(math.atan2(y,x))
+print(math.hypot(x,y))
+
+
+
+<----------------23  Math – math.pi application--------------->
+
+
+
+import math
+r = float(input("Enter radius of circle: "))
+area=(math.pi)*r*r
+print(" Area Of a Circle = %.2f" %area)
+
+
+
+<----------------24  Special Character------------------------>
+
+ch = "I\nLove\tIndia"
+print (ch)
+ch1='It\'s raining'
+print(ch1)
+print('"\\" is the backslash')
+print("\"hello world\"")
+
+
+<---------------------25 different data types----------------->
+
+
+a = 5
+print(a, "is of type", type(a))
+a = 2.0
+print(a, "is of type", type(a))
+a = 1+2j
+print(a, "is of type", type(a))
+print(format(123, "d"))
+print(format(123.4567898, "f"))
+print(format(12, "b"))
+# string
+str = "world"
+print("Hello, %s!" % str)
+name = "John"
+age = 23
+print("%s is %d years old." % (name, age))
+test = "Hello"
+print('{}'.format(test))
+#list
+a= [1,2,3,4,5,6]
+print(a)
+print(type(a))
+b=["hello","hii","bye"]
+print(b)
+print(type(b))
+c= ["hii","sam",1,2,3,"go"]
+print(c)
+#tuple
+a=(1,2,3,4)
+print(a)
+print(type(a))
+#dictionary
+a = {"A":1,"B":2,"C":3}
+print(a["A"])
+print(a["B"])
+print(a["C"])
+print(type(a))
+
+
+<---------27  check given string is Palindrome or not--------------->
+
+
+str = input("Enter a String : ")
+
+if(str == str[:: - 1]):
+   print("This is a Palindrome")
+else:
+   print("This is Not a Palindrome")
+
+
+<---------------- 28 number of vowels in a string----------------->
+
+
+vowels = 'aeiou'
+string = input("Enter a string: ")
+
+string = string.casefold()
+dict = {}.fromkeys(vowels,0)
+for char in string:
+   if char in dict:
+       dict[char] += 1
+
+print(dict)
+
+
+
+<---------------29 all built in functions on Strings------------------>
+
+str="this is a string"
+print(str.capitalize())
+
+str1="HELLO"
+print(str1.casefold())
+
+str3="hello"
+print(str3.center(10))
+print(str.count("is"))
+print(str.encode())
+
+str = "Hello, welcome to my world."
+x = str.endswith(".")
+print(x)
+print(str.find("welcome"))
+print(str.index("welcome"))
+
+str = "H\te\tl\tl\to"
+print(str.expandtabs(3))
+
+str3 = "My name is {}, I'am {}".format("John",36)
+print(str3)
+
+str4 = "Sony12"
+print(str4.isalnum())
+
+str5= "SonyX"
+print(str5.isalpha())
+str6 = "hello world!"
+print(str6.islower())
+
+str7 = "   "
+print(str7.isspace())
+
+str8 = "Hello, And Welcome To My World!"
+print(str8.istitle())
+
+str9="WELCOME"
+print(str9.isupper())
+
+Tuple = ("hello", "john", "sinha")
+print("!".join(Tuple))
+str10="HELLO world"
+
+print(str10.lower())
+
+str11= "     hello    "
+print(str11.lstrip())
+
+str12="it is raining"
+print(str12.partition("is"))
+
+str13 = "I like cricket"
+print(str13.replace("cricket", "football"))
+
+print(str8.rfind("e"))
+print(str8.rindex("e"))
+print(str8.rjust(20))
+
+str14 = "I like cricket,cricket is my favourite game"
+print(str14.rpartition("cricket"))
+str15="apple, banana, cherry"
+print(str15.rsplit(", "))
+str16="Hello My Name Is SONY"
+print(str16.swapcase())
+
+
+
+<---------------30 program to Sort given N numbers------------------>
+
+
+
+a = [21,78,2,8,3,80,99,6,50]
+n=len(a)
+for i in range(n -1):
+    for j in range(n- i - 1):
+        if(a[j] > a[j + 1]):
+             temp = a[j]
+             a[j] = a[j + 1]
+             a[j + 1] = temp
+print("The Sorted List in Ascending Order : ", a)
+
+
+
+
+<-------------31  program to search an element in the list-------------->
+
+
+
+def binary(list,ele):
+    start = 0
+    end = len(list)
+    while start < end:
+        mid = (start + end)//2
+        if list[mid] > ele:
+            end = mid
+        elif list[mid] < ele:
+            start = mid + 1
+        else:
+            return mid
+    return -1
+ 
+list = input('Enter the sorted list of numbers: ')
+list = list.split()
+list = [int(x) for x in list]
+ele = int(input('The number to search for: '))
+ 
+index = binary(list, ele)
+if index < 0:
+    print("success")
+else:
+    print("unsuccessfull search")
+
+
+
+
+
+<--------------------32 LISTS--------------------------------------->
+
+
+list1= ["delhi", "mumbai", "chennai","kolkata"]
+list2= ["patna", "ranchi", "chandhigarh","punjab"]
+list3= ["bhopal", "bangalore", "hyderabad","oddisa"]
+print("name of elements in list1 is: " ,list1)
+sizes1 = []
+for i in list1:
+    sizes1.append(len(i))
+print("length of each elements in list1 is: " , sizes1)
+print("name of elements in list2 is: " ,list2)
+sizes2 = []
+for i in list2:
+    sizes2.append(len(i))
+print("length of each elements in list2 is: " , sizes2)
+print("name of elements in list3 is: " ,list3)
+sizes3 = []
+for i in list3:
+    sizes3.append(len(i))
+print("length of each elements in list3 is: " , sizes3)
+
+print("Maximum length of element in the list1 is :", max(sizes1))
+print("Maximum length of element in the list2 is :", max(sizes2))
+print("Maximum length of element in the list3 is :", max(sizes3))
+print("Minimum length of element in the list1 is :", min(sizes1))
+print("Minimum length of element in the list2 is :", min(sizes2))
+print("Minimum length of element in the list3 is :", min(sizes3))
+
+print("list1 after deleting first and last element is:", list1[1:-1])
+print("list2 after deleting first and last element is:", list2[1:-1])
+print("list3 after deleting first and last element is:", list3[1:-1])
+
+
+<-----------------------33 lists------------------------------------->
+
+
+
+list= ["patna", "ranchi", "chandhigarh","punjab","chennai","delhi", "mumbai"]
+       
+list.append("lucknow")
+print("list after appending a new city:",list)
+list[3]="banaras"
+print("list after inserting a new cityat 4th index:",list)
+list.sort(key=len)
+print(list)
+list.sort(reverse=False)
+print(list)
+
+list.sort(reverse=True)
+print(list)
+list.pop(-1)
+list.pop(-1)
+list.pop(-1)
+print(list)
