@@ -300,3 +300,157 @@ list.pop(-1)
 list.pop(-1)
 list.pop(-1)
 print(list)
+
+<------------------------------34 lists----------------------------------------->
+
+
+list1=[1,55,20,23,48]
+list2=[49,30,5,45,56,29]
+list3=[22,42,44,12,76]
+print(list1.sort())
+print(list2.sort())
+print(list3.sort())
+Maxlist1=list1[-2:]
+print("Maxlist1=",Maxlist1)
+Minlist1=list1[:2]
+print("Minlist1=",Minlist1)
+Maxlist2=list2[-2:]
+print ("Maxlist2=",Maxlist2)
+Minlist2=list2[:2]
+print( "Minlist2=",Minlist2)
+Maxlist3=list3[-2:]
+print ("Maxlist3=",Maxlist3)
+Minlist3=list3[:2]
+print( "Minlist3=",Minlist3)
+Maxlist=Maxlist1+Maxlist2+Maxlist3
+print ("The Maxlist taking 2 maximum elements from each list is",Maxlist)
+Minlist=Minlist1+Minlist2+Minlist3
+print( "The Minlist taking 2 minimum elements from each list is",Minlist)
+sumMax=0
+for each in Maxlist:
+  sumMax+=each
+print(sumMax)
+SumMaxAvg=float(sumMax/6.0)
+print ("Average of Maxlist is",SumMaxAvg)
+sumMin=0
+for each in Minlist:
+  sumMin+=each
+print (sumMin)
+sumMinAvg=float(sumMin/6.0)
+print ("Average of Minlist is",sumMinAvg)
+
+
+<-------------------------------35 TUPLE----------------------------------------->
+
+
+
+tup1=('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday')
+for ele in tup1:
+  print (ele)
+tup2=('January','February','March','April','May','June','July','August','September',
+'October','November','December')
+tuple2=tup1+tup2
+print ("tuple after Concat=",tuple2)
+tup1=(100,9,2,5,3)
+tup2=(22,44,20,13,45,9)
+tup3=(99,12,34,21,55)
+if tup1>tup2 and tup1>tup3:
+  print( "Tup1 is the biggest")
+elif tup2>tup1 and tup2>tup3:
+  print ("tup2 is the biggest")
+else:
+  print ("tup3 is the biggest of all")
+'''del tup1[2]
+  Traceback (most recent call last):
+  File "python", line 24, in <module>
+TypeError: 'tuple' object doesn't support item deletion'''
+del tup1
+print(tup1)
+'''Traceback (most recent call last):
+  File "python", line 29, in <module>
+NameError: name 'tup1' is not defined'''
+tup2=list(tup2)
+tup2.append(500)
+print("Tup2 after appending a new item ",tup2)
+
+
+<-------------------------------36 TUPLE---------------------------------------------->
+
+
+tup1=('sony','kumari',89,'123ab','hii')
+tup2=('hello',100,'213cd',12,123)
+print ("tup1 is",tup1)
+print( "tup2 is",tup2)
+print( "cmp(tup1,tup2)=",cmp(tup1,tup2))
+print( "cmp(tup2,tup1)=",cmp(tup2,tup1))
+print( "Length of tup1 is",len(tup1))
+print ("Length of tup2 is",len(tup2))
+print( "Max of tup1 is",max(tup1))
+print( "Max of tup2 is",max(tup2))
+print ("Min of tup1 is",min(tup1))
+print ("Min of tup2 is",min(tup2))
+aList = (123, 'xyz', 'zara', 'abc')
+aTuple = tuple(aList)
+print ("Tuple elements are",aTuple)
+
+
+<--------------------------------37 Dictionary------------------------------------------->
+
+
+dict1={'A':200,'name':'SOni','Fname':'soni'}
+dict2={'B':50,'Name':'kumari soni','Clg':'DCRUST'}
+dict3={'Lname':'Kumari','height':152,'Bgroup':'B+'}
+dict1['DOJ']=15
+dict2['weight']=55
+print ("\ndict1 after adding new elements is",dict1)
+print( "\ndict2 after adding new elements is",dict2)
+print ("Length of dict1 is",len(dict1))
+print ("Length of dict2 is",len(dict2))
+print( "Length of dict3 is",len(dict3))
+dict1Str=str(dict1)
+dict2Str=str(dict2)
+dict3Str=str(dict3)
+dictStr=dict1Str+dict2Str+dict3Str
+print ("the concatenated dicts is",dictStr)
+
+
+<-----------------------------38 Dictionaries & DATE AND TIME----------------------------------------->
+
+
+dict1 ={'Name':'Ramakrishna','Age':25} 
+dict2={'EmpId':1234,'Salary':5000}
+dict1.update(dict2)
+print( "After merging dict1 and dict2, dict is",dict1)
+a=5000+5000*10/100
+dict1['Salary']=a
+print ("the dict after updating salary to 10% is ",dict1)
+dict1['Age']=26
+print ("the dict after updating age to 26 is ",dict1)
+dict1['Grade']='B1'
+print("the dict is",dict1)
+print ("The keys of dict is",dict1.keys())
+print( "The values of dict is",dict1.values())
+del dict1['Age']
+print ("Dict after deleting element with key Age is",dict1)
+
+<-----------------------------------39 Dictionaries & DATE AND TIME------------------------------->
+
+
+import time
+import calendar
+localtime = time.asctime(time.localtime(time.time()))
+print ("current time is:", localtime)
+cal = calendar.month(2019,9)
+print( "the calendar is:",cal)
+
+
+<-----------------------------------40 Dictionaries & DATE AND TIME------------------------------->
+
+import time
+i=12
+while i>0:
+  localtime = time.asctime(time.localtime(time.time()))
+  print ("current time is:", localtime)
+  time.sleep(5)
+  i=i-1
+
